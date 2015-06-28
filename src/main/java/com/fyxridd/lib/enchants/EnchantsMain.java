@@ -22,7 +22,7 @@ public class EnchantsMain implements Listener{
     private static HashMap<String, HashMap<String, Enchant>> enchantsHash = new HashMap<String, HashMap<String, Enchant>>();
 
     public EnchantsMain() {
-        savePath = EnchantsPlugin.dataPath+File.separator+ "src/main2/resources/enchants.yml";
+        savePath = EnchantsPlugin.dataPath+File.separator+ "enchants.yml";
         //初始化配置
         initConfig();
 		//读取配置文件
@@ -124,9 +124,7 @@ public class EnchantsMain implements Listener{
     }
 
     private void initConfig() {
-        List<String> filter = ConfigApi.getDefaultFilter();
-        filter.add("src/main2/resources/enchants.yml");
-        ConfigApi.register(EnchantsPlugin.file, EnchantsPlugin.dataPath, filter, EnchantsPlugin.pn, null);
+        ConfigApi.register(EnchantsPlugin.file, EnchantsPlugin.dataPath, EnchantsPlugin.pn, null);
         ConfigApi.loadConfig(EnchantsPlugin.pn);
     }
 

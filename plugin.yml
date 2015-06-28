@@ -1,5 +1,5 @@
 ﻿name: Lib_enchants
 main: com.fyxridd.lib.enchants.api.EnchantsPlugin
-version: 1.0.0
+version: 1.1.0
 depend: [Lib_core]
 softdepend:
