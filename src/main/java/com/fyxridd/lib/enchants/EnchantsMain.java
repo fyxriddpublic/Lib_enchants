@@ -19,7 +19,7 @@ public class EnchantsMain implements Listener{
     private static String savePath;
 
     //插件名 类型名 附魔信息
-    private static HashMap<String, HashMap<String, Enchant>> enchantsHash = new HashMap<String, HashMap<String, Enchant>>();
+    private static HashMap<String, HashMap<String, Enchant>> enchantsHash = new HashMap<>();
 
     public EnchantsMain() {
         savePath = EnchantsPlugin.dataPath+File.separator+ "enchants.yml";
