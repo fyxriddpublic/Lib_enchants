@@ -1,5 +1,6 @@
 package com.fyxridd.lib.enchants;
 
+import com.fyxridd.lib.core.api.CoreApi;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
@@ -34,7 +35,7 @@ public class Enchant {
             int tarLevel = level.getRandomLevel();
             if (tarLevel > 0) {//检测给物品添加附魔
                 //fit检测
-                if (!fit || e.getItemTarget().includes(is)) {
+                if (!fit || (e.getItemTarget() != null && e.getItemTarget().includes(is))) {
                     //不更新
                     if (mode == 1) {
                         int preLevel = is.getEnchantmentLevel(e);
