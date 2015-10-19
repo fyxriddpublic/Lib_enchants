@@ -131,7 +131,7 @@ public class EnchantsMain implements Listener{
     }
 
     private void initConfig() {
-        ConfigApi.register(EnchantsPlugin.file, EnchantsPlugin.dataPath, EnchantsPlugin.pn, null);
+        ConfigApi.register(EnchantsPlugin.file, EnchantsPlugin.dataPath, EnchantsPlugin.pn);
         ConfigApi.loadConfig(EnchantsPlugin.pn);
     }
 
