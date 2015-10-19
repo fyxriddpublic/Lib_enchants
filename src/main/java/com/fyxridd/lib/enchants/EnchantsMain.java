@@ -55,18 +55,16 @@ public class EnchantsMain implements Listener{
         return enchant.addEnchant(is);
     }
 
+    public static void reloadEnchants(String plugin) {
+        if (plugin == null) return;
+        reloadEnchants(plugin, CoreApi.loadConfigByUTF8(new File(CoreApi.pluginPath, plugin+"/enchants.yml")));
+    }
 
-    /**
-     * @see com.fyxridd.lib.enchants.api.EnchantsApi#reloadEnchants(String, File)
-     */
     public static void reloadEnchants(String plugin, File file) {
         if (plugin == null || file == null) return;
         reloadEnchants(plugin, CoreApi.loadConfigByUTF8(file));
     }
 
-    /**
-     * @see com.fyxridd.lib.enchants.api.EnchantsApi#reloadEnchants(String, org.bukkit.configuration.file.YamlConfiguration)
-     */
     public static void reloadEnchants(String plugin, YamlConfiguration config) {
         if (plugin == null || config == null) return;
 

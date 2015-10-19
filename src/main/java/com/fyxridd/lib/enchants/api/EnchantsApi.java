@@ -1,27 +1,15 @@
 package com.fyxridd.lib.enchants.api;
 
 import com.fyxridd.lib.enchants.EnchantsMain;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.inventory.ItemStack;
-
-import java.io.File;
 
 public class EnchantsApi {
     /**
-     * @param file yml文件,可为null(null时无效果)
-     * @see #reloadEnchants(String, org.bukkit.configuration.file.YamlConfiguration)
-     */
-    public static void reloadEnchants(String plugin, File file) {
-        EnchantsMain.reloadEnchants(plugin, file);
-    }
-
-    /**
      * 重新读取附魔配置
-     * @param plugin 注册的插件名,可为null(null时无效果)
-     * @param config 配置文件,可为null(null时无效果)
+     * 会读取'插件名/enchants.yml'文件
      */
-    public static void reloadEnchants(String plugin, YamlConfiguration config) {
-        EnchantsMain.reloadEnchants(plugin, config);
+    public static void reloadEnchants(String plugin) {
+        EnchantsMain.reloadEnchants(plugin);
     }
 
     /**
